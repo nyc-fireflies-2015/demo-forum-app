@@ -1,0 +1,9 @@
+<div class="message">
+  <div class="message_header">By 
+    <%= msg.author_username %> at <%= msg.created_at.to_formatted_s(:short) %>
+  </div>
+  <div class="message_body">
+    <%= msg.content %>
+
+  </div>
+</div>
