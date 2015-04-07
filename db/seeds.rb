@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+u = User.create!(username:Faker::Internet.user_name, email:Faker::Internet.email, password:'123456')
+6.times do
+  top = Topic.create!(name: Faker::Company.catch_phrase)
+  6.times do
+    thr = MessageThread.create!(name:Faker::Commerce.product_name, topic:top, author:u )
+    Random.rand(20).times do
+      msg = Message.create!(author:u, message_thread:thr, content:Faker::Lorem.sentence)
+    end
+  end
+end
