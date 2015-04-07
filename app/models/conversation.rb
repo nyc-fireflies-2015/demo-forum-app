@@ -4,4 +4,8 @@ class Conversation < ActiveRecord::Base
   has_many :messages
 
   delegate :username, to: :author, prefix: true
+  def to_param
+    [id, subject.parameterize].join("-")
+  end
+
 end
