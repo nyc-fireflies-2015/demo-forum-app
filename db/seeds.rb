@@ -9,7 +9,7 @@ u = User.create!(username:'steven', email:Faker::Internet.email, password:'12345
 6.times do
   top = Topic.create!(name: Faker::Company.catch_phrase)
   6.times do
-    thr = Conversation.create!(name:Faker::Commerce.product_name, topic:top, author:u )
+    thr = Conversation.create!(subject:Faker::Commerce.product_name, topic:top, author:u )
     Random.rand(20).times do
       msg = Message.create!(author:u, conversation:thr, content:Faker::Lorem.paragraph(3))
     end
