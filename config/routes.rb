@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :topics do
-    resources :message_threads
+    resources :conversations
   end
 
 

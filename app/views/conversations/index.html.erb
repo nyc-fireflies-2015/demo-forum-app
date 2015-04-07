@@ -1,0 +1,5 @@
+<% @threads.each do |thr| %>
+  <div>
+    <%= link_to thr.name, topic_conversation_path(thr.topic, thr) %>
+  </div>
+<% end %>

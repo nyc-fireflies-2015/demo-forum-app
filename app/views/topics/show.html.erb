@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @topic.message_threads.each do |thr| %>
+    <% @topic.conversations.each do |thr| %>
       <%= render partial:'thread', locals: {thr: thr} %>
     <% end %>
   </tbody>

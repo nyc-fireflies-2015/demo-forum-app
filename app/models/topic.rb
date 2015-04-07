@@ -1,3 +1,3 @@
 class Topic < ActiveRecord::Base
-  has_many :message_threads
+  has_many :conversations
 end
