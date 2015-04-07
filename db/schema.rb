@@ -16,18 +16,18 @@ ActiveRecord::Schema.define(version: 20150407111656) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "messages", force: :cascade do |t|
-    t.integer  "thread_id"
+  create_table "message_threads", force: :cascade do |t|
+    t.integer  "topic_id"
+    t.string   "name"
     t.integer  "author_id"
-    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "threads", force: :cascade do |t|
-    t.integer  "topic_id"
-    t.string   "name"
+  create_table "messages", force: :cascade do |t|
+    t.integer  "message_thread_id"
     t.integer  "author_id"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
