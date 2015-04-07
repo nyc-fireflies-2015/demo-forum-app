@@ -1,5 +1,5 @@
 <tr>
-	<td><%= topic.name %> </td>
+	<td><%= link_to(topic.name, topic_path(topic)) %> </td>
 	<td><%= topic.created_at %></td>
 	<td><%= topic.message_threads.count %> </td>
 </tr>

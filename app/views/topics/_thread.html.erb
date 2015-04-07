@@ -1,0 +1,5 @@
+<tr>
+  <td><%= link_to thr.name, topic_message_thread_path(thr.topic, thr) %></td>
+  <td><%= thr.author_username %></td>
+  <td><%= thr.created_at.to_formatted_s(:short) %>
+</tr>

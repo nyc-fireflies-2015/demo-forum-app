@@ -1,0 +1,17 @@
+<h1>Topic: <%= @topic.name %></h1>
+
+<h2>Threads</h2>
+<table id="topic_threads">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Started by</th>
+      <th>Started at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @topic.message_threads.each do |thr| %>
+      <%= render partial:'thread', locals: {thr: thr} %>
+    <% end %>
+  </tbody>
+</table>
