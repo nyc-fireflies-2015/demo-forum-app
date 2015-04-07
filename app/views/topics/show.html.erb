@@ -10,8 +10,8 @@
     </tr>
   </thead>
   <tbody>
-    <% @topic.conversations.each do |thr| %>
-      <%= render partial:'thread', locals: {thr: thr} %>
+    <% @topic.conversations.each do |conv| %>
+      <%= render partial:'conv', locals: {conv: conv} %>
     <% end %>
   </tbody>
 </table>
