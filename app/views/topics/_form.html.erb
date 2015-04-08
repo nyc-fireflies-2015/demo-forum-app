@@ -1,0 +1,19 @@
+<%= form_for top do |f| %>
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit %>
+  </fieldset>
+<% end %>
+
+<% if top.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(top.errors.count, "error") %> prohibited this topic from being saved:</h2>
+
+    <ul>
+    <% top.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
