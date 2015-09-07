@@ -4,6 +4,15 @@ body {
   font-family: arial, helvetica, sans-serif;
 }
 
+div#main {
+   max-width: 900px;
+   margin: auto;
+
+}
+td.numeric {
+  text-align: right;
+}
+
 .field_with_errors {
   input {
     border: 1px solid red;
