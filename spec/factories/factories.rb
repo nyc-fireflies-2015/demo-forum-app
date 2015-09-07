@@ -1,7 +1,11 @@
 FactoryGirl.define do
 
    factory(:topic) do
-     name Faker::Commerce.product_name
+     sequence(:name) {|n| "#{Faker::Commerce.product_name} #{n} "} 
+     
+     factory(:bad_topic) do
+        name nil
+     end
    end
 
    factory(:user) do
