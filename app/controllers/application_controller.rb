@@ -5,8 +5,7 @@ class ApplicationController < ActionController::Base
   before_filter :ensure_current_user
 
   def current_user
-    puts "Session user is #{session[:user_id]}"
-    User.find_by(id: session[:user_id])
+    @user ||= User.find_by(id: session[:user_id]) if session[:user_id]
   end
 
   helper_method :current_user
