@@ -2,9 +2,12 @@ require 'rails_helper'
 
 feature 'Root page' do 
 
-  let(:sample_user)  { User.create!(username:'steven', password:'b123456', email:'steven@example.com')}
-  let!(:sample_topic) { Topic.create!(name: Faker::Commerce.product_name) }
+  FactoryGirl.lint
+  let!(:sample_user)  { FactoryGirl.create(:user) } 
+  let!(:sample_user2)  { FactoryGirl.create(:user) } 
+  let!(:sample_topic) { FactoryGirl.create(:topic) }
   let(:sample_convo) { Conversation.create!(topic: sample_topic, subject:'ABC', author: sample_user) }
+
 
   context 'I can see topics' do
     it 'should show a list of topics' do
