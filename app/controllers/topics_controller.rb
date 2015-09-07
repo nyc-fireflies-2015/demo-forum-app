@@ -1,4 +1,5 @@
 class TopicsController < ApplicationController
+  skip_before_filter :ensure_current_user, only: [:index, :show]
   def index
     @topics = Topic.all
   end
