@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
 
   def create
-    msg = Message.new(permitted_params)
+    msg = Message.new permitted_params
     if (msg.save)
       render partial:'conversations/message_block', locals:{msg: msg}
     else
