@@ -1,5 +1,25 @@
+$headers-color: #CCDDEE;
+
+body {
+  font-family: arial, helvetica, sans-serif;
+}
+
 .field_with_errors {
   input {
     border: 1px solid red;
+  }
+}
+
+.message-block {
+  padding-top: 8px;
+
+
+  .message-header {
+    background-color: $headers-color;
+    margin-bottom: 4px;
+  }
+
+  .message-author {
+    font-weight: bold;
   }
 }
