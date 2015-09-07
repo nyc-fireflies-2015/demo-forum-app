@@ -1,6 +1,6 @@
 <tr>
   <td><%= link_to conv.subject, topic_conversation_path(conv.topic, conv) %></td>
   <td><%= conv.author_username %></td>
-  <td><%= conv.created_at.to_formatted_s(:short) %>
+  <td><%= conv.created_at.to_formatted_s(:forum) %>
   <td class="numeric"><%= conv.messages.count %></td>
 </tr>

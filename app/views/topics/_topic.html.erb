@@ -1,5 +1,5 @@
 <tr>
 	<td><%= link_to(topic.name, topic_path(topic)) %> </td>
-	<td><%= topic.created_at.to_formatted_s(:short) %></td>
+	<td><%= topic.created_at.to_formatted_s(:forum) %></td>
 	<td>(<%= topic.conversations.count %> threads)</td>
 </tr>

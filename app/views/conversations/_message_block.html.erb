@@ -2,7 +2,7 @@
 <div class="message-block">
   <div class="message-header">From
     <span class="message-author"><%= msg.author_username %></span> posted
-     at <span class="message-timestamp"><%= msg.created_at.to_formatted_s(:short) %></span>
+     at <span class="message-timestamp"><%= msg.created_at.to_formatted_s(:forum) %></span>
   </div>
   <div class="message-body">
     <%= msg.content %>

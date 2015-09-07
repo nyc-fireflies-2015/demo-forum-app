@@ -1,6 +1,6 @@
 <h1><%= @conv.subject %></h1>
 <h2><%= @conv.topic_name %></h2>
-<h3>Started at <%= @conv.created_at.to_formatted_s(:short)  %> by  <%= @conv.author_username %></h3>
+<h3>Started at <%= @conv.created_at.to_formatted_s(:forum)  %> by  <%= @conv.author_username %></h3>
 
 <div id="message_list">
   <% @conv.messages.each do |msg| %>
